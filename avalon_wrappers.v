@@ -32,10 +32,10 @@ module avalon_wrappers(
 		
 		
 	assign coe_pwm_out = pwm_out & enable;
-
+	assign avs_s0_readdata = read_data;
 	assign load_pulse_width = avs_s0_chip_select & avs_s0_write & (avs_s0_address == 0);
 	assign load_pulse_width_lanes = avs_s0_byteenable;
-	assign load_perioid = avs_s0_chip_select & avs_s0_write & (avs_s0_address == 1);
+	assign load_period = avs_s0_chip_select & avs_s0_write & (avs_s0_address == 1);
 	assign load_period_lanes = avs_s0_byteenable;
 	assign load_enable = avs_s0_chip_select & avs_s0_write & (avs_s0_address ==2);
 	
